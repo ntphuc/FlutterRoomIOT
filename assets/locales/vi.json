@@ -1,0 +1,47 @@
+{
+  "email": "Email",
+  "password": "Mật khẩu",
+  "confirmPassword": "xác nhận mật khẩu",
+  "firstName": "Tên",
+  "lastName": "Họ",
+  "signIn": "Đăng nhập",
+  "signUp": "Đăng ký",
+  "signOut": "Đăng xuất",
+  "forgotPassword": "Quên mật khẩu",
+  "back": "Trở về",
+  "confirm": "Xác nhận",
+  "setting": "Cài đặt",
+  "darkMode": "Chế độ tối",
+  "language": "Ngôn ngữ",
+  "english": "Tiếng Anh",
+  "vietnamese": "Tiếng Việt",
+  "option": "Tuỳ chọn",
+
+  "signInTitle1": "Đăng nhập MISA AMIS",
+  "signInTitle2": "Để sử dụng ứng dụng Phòng họp",
+
+  "meetingRoom": "Phòng họp",
+  "my": "Của tôi",
+  "orderRoom": "Đặt phòng",
+  "notification": "Thông báo",
+  "more": "Thêm",
+
+  "enterTitle": "Nhập tiêu đề",
+  "start": "Bắt đầu",
+  "end": "Kết thúc",
+  "repeat": "Lặp lại",
+  "participant": "Người tham gia",
+  "note": "Ghi chú",
+
+  "rate": "Đánh giá ứng dụng",
+  "feedback": "Phản hồi",
+  "info": "Thông tin sản phẩm",
+
+  "never": "Không bao giờ",
+  "everyDay": "Hàng ngày",
+  "everyWeek": "Hàng tuần",
+  "everyMonth": "Hàng tháng",
+  "everyYear": "Hàng năm",
+  "search": "Tìm kiếm",
+  "cancel": "Huỷ"
+}
