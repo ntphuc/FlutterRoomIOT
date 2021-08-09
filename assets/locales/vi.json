@@ -16,27 +16,22 @@
   "english": "Tiếng Anh",
   "vietnamese": "Tiếng Việt",
   "option": "Tuỳ chọn",
-
-  "signInTitle1": "Đăng nhập MISA AMIS",
+  "signInTitle1": "Đăng nhập CP SMART BUILDING",
   "signInTitle2": "Để sử dụng ứng dụng Phòng họp",
-
   "meetingRoom": "Phòng họp",
   "my": "Của tôi",
   "orderRoom": "Đặt phòng",
   "notification": "Thông báo",
   "more": "Thêm",
-
   "enterTitle": "Nhập tiêu đề",
   "start": "Bắt đầu",
   "end": "Kết thúc",
   "repeat": "Lặp lại",
   "participant": "Người tham gia",
   "note": "Ghi chú",
-
   "rate": "Đánh giá ứng dụng",
   "feedback": "Phản hồi",
   "info": "Thông tin sản phẩm",
-
   "never": "Không bao giờ",
   "everyDay": "Hàng ngày",
   "everyWeek": "Hàng tuần",

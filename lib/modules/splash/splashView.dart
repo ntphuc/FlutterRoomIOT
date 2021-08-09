@@ -1,5 +1,4 @@
 import 'package:demo_b/constants/appColor.dart';
-import 'package:demo_b/core/routes/routeName.dart';
 import 'package:demo_b/modules/base/baseView.dart';
 import 'package:demo_b/modules/splash/splashModel.dart';
 import 'package:demo_b/utils/screenUtil.dart';
@@ -18,10 +17,9 @@ class _SplashViewState extends State<SplashView> {
     ScreenUtil.init(context);
 
     return BaseView<SplashModel>(
-      model: SplashModel(),
+      model: SplashModel(context),
       onModelReady: (model) async {
         await model.init();
-        Navigator.of(context).pushReplacementNamed(RouteName.signIn);
       },
       builder: (context, model, _) {
         return Stack(

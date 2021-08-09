@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "145779435469",
+    "project_id": "smartbuilding-67e2f",
+    "storage_bucket": "smartbuilding-67e2f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:145779435469:android:9848305a6787d75d52c684",
+        "android_client_info": {
+          "package_name": "com.ttp.smartbuilding"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "145779435469-ha1n6ojsn30r8qut7dtebl6039vedcu1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ttp.smartbuilding",
+            "certificate_hash": "e7c3e7fe22f0940306da08f5ac97cc483b274872"
+          }
+        },
+        {
+          "client_id": "145779435469-sasjhpla802p83n4ikulus13o0t5i6d3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMBSSLFhq_904Mf7AAm6sdS5Lp3XarsKA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "145779435469-sasjhpla802p83n4ikulus13o0t5i6d3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

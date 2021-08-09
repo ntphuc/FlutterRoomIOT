@@ -43,6 +43,7 @@ class _TimelineTileState extends State<TimelineTile> {
             title: widget.data[index].title,
             room: widget.data[index].room,
             type: widget.type,
+            meetingId: widget.data[index].meetingId,
           ),
           itemCount: widget.data.length,
         )

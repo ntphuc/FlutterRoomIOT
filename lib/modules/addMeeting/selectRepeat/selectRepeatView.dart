@@ -9,6 +9,9 @@ import 'package:demo_b/widgets/selectRepeatTile.dart';
 import 'package:flutter/material.dart';
 
 class SelectRepeatView extends StatefulWidget {
+  final int init;
+
+  const SelectRepeatView({Key key, this.init}) : super(key: key);
   @override
   _SelectRepeatViewState createState() => _SelectRepeatViewState();
 }
@@ -19,21 +22,42 @@ class _SelectRepeatViewState extends State<SelectRepeatView> {
     ScreenUtil.init(context);
 
     return BaseView<SelectRepeatModel>(
-      model: SelectRepeatModel(),
+      model: SelectRepeatModel()..init(widget?.init ?? 0),
       builder: (context, model, _) {
-        return Stack(
-          alignment: AlignmentDirectional.center,
-          children: [
-            Scaffold(
-              appBar: AppAppBar(
-                centerTitle: true,
-                title: '${ScreenUtil.t(I18nKey.repeat)}',
-                allowBack: true,
+        return WillPopScope(
+          onWillPop: () async {
+            final ls =
+                model.items.where((element) => element.selected).toList();
+            final item = ls.length == 0 ? model.items.first : ls.first;
+            Navigator.of(context).pop(item);
+            return Future.value(false);
+          },
+          child: Stack(
+            alignment: AlignmentDirectional.center,
+            children: [
+              Scaffold(
+                appBar: AppAppBar(
+                  centerTitle: true,
+                  title: '${ScreenUtil.t(I18nKey.repeat)}',
+                  allowBack: false,
+                  leading: IconButton(
+                    icon: Icon(Icons.arrow_back_ios_outlined),
+                    color: Colors.black,
+                    onPressed: () {
+                      final ls = model.items
+                          .where((element) => element.selected)
+                          .toList();
+                      final item =
+                          ls.length == 0 ? model.items.first : ls.first;
+                      Navigator.of(context).pop(item);
+                    },
+                  ),
+                ),
+                body: _buildView(context, model),
               ),
-              body: _buildView(context, model),
-            ),
-            model.loading ? AppSpinner() : Container()
-          ],
+              model.loading ? AppSpinner() : Container()
+            ],
+          ),
         );
       },
     );

@@ -32,13 +32,15 @@ class OrderRoomTile extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 12, right: 12),
             child: Text(
-              '${content}',
+              '$content',
               style: AppStyle.h4,
             ),
           ),
-          Icon(title == I18nKey.start || title == I18nKey.end
-              ? Icons.calendar_today
-              : Icons.arrow_forward_ios_outlined)
+          Icon(
+            title == I18nKey.start || title == I18nKey.end
+                ? Icons.calendar_today
+                : Icons.arrow_forward_ios_outlined,
+          )
         ],
       ),
     );

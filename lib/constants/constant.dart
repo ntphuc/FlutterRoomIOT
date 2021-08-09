@@ -1,4 +1,4 @@
 class Constant {
-  static const success = 'success';
-  static const failure = 'failure';
+  static const success = 'Thành công';
+  static const failure = 'Thất bại';
 }

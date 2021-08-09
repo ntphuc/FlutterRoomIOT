@@ -1,5 +1,5 @@
 import 'package:demo_b/models/reqres/base.dart';
-import 'package:demo_b/models/token.dart';
+import 'package:demo_b/models/user.dart';
 
 class SignInReq extends BaseReq {
   String email;
@@ -9,7 +9,7 @@ class SignInReq extends BaseReq {
 }
 
 class SignInRes extends BaseRes {
-  Token data;
+  User data;
 
   SignInRes({this.data, int status, String message})
       : super(status: status, message: message);

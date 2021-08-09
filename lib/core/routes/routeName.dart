@@ -14,4 +14,6 @@ class RouteName {
   static const selectRepeat = '/select-repeat';
   static const meetingDetails = '/meeting-details';
   static const meetingCalendar = '/meeting-calendar';
+  static const roomListControl = '/room-list-control';
+  static const deviceListControl = '/device-list-control';
 }

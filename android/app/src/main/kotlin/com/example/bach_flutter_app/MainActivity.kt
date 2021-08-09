@@ -1,4 +1,4 @@
-package com.example.bach_flutter_app
+package com.ttp.smartbuilding
 
 import io.flutter.embedding.android.FlutterActivity
 

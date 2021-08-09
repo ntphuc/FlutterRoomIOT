@@ -3,12 +3,12 @@ import 'package:demo_b/widgets/selectRoomTile.dart';
 
 class SelectRoomModel extends BaseModel {
   List<SelectRoomItem> items = [
-    SelectRoomItem(
+    /* SelectRoomItem(
         name: 'Phòng họp 1',
         description: '20 người, máy chiếu, đèn',
         selected: true),
     SelectRoomItem(
-        name: 'Phòng họp 2', description: '8 người', selected: false),
+        name: 'Phòng họp 2', description: '8 người', selected: false), */
   ];
 
   void onChangedSelectItem(int index, bool value) {

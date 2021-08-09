@@ -1,5 +1,6 @@
-import 'package:demo_b/modules/base/baseModel.dart';
 import 'package:validators/validators.dart';
+
+import '../../modules/base/baseModel.dart';
 
 class ValidationItem {
   ValidationItem({this.value, this.error});
@@ -56,7 +57,7 @@ class ValidationModel extends BaseModel {
 
   bool isValidForgotPassword(String email) {
     validateEmail(email);
-    if (_email.error.isEmpty) {
+    if (isNull(_email.error)) {
       return true;
     }
     return false;

@@ -1,7 +1,17 @@
 import 'package:demo_b/app.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:oktoast/oktoast.dart';
 
-void main() {
+import 'services/io.dart';
+
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(App());
+  await IO.getInstance();
+  Intl.defaultLocale = "vi";
+  runApp(
+    OKToast(
+      child: App(),
+    ),
+  );
 }

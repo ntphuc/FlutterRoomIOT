@@ -3,12 +3,17 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SelectRoomItem {
+  String id;
   String name;
   String description;
   bool selected;
 
-  SelectRoomItem(
-      {@required this.name, @required this.description, this.selected = false});
+  SelectRoomItem({
+    @required this.id,
+    @required this.name,
+    @required this.description,
+    this.selected = false,
+  });
 }
 
 class SelectRoomTile extends StatefulWidget {

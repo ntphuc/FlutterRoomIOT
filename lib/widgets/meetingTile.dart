@@ -1,18 +1,24 @@
-import 'package:demo_b/constants/appStyle.dart';
-import 'package:demo_b/core/routes/routeName.dart';
+import 'package:demo_b/blocs/my_meeting/my_meeting_bloc.dart';
+import 'package:demo_b/modules/roomMeetingDetail/room_meeting_detail.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../constants/appStyle.dart';
 
 class MeetingItem {
   String start;
   String end;
   String title;
   String room;
+  String meetingId;
 
-  MeetingItem(
-      {@required this.start,
-      @required this.end,
-      @required this.title,
-      @required this.room});
+  MeetingItem({
+    @required this.start,
+    @required this.end,
+    @required this.title,
+    @required this.room,
+    @required this.meetingId,
+  });
 }
 
 class MeetingTile extends StatefulWidget {
@@ -20,14 +26,17 @@ class MeetingTile extends StatefulWidget {
   final String end;
   final String title;
   final String room;
+  final String meetingId;
   final int type;
 
-  MeetingTile(
-      {@required this.start,
-      @required this.end,
-      @required this.title,
-      @required this.room,
-      this.type});
+  MeetingTile({
+    @required this.start,
+    @required this.end,
+    @required this.title,
+    @required this.room,
+    @required this.meetingId,
+    this.type,
+  });
 
   @override
   _MeetingTileState createState() => _MeetingTileState();
@@ -71,8 +80,17 @@ class _MeetingTileState extends State<MeetingTile> {
           ),
           Expanded(
               child: InkWell(
-            onTap: () {
-              Navigator.of(context).pushNamed(RouteName.meetingDetails);
+            onTap: () async {
+              // Navigator.of(context).pushNamed(RouteName.meetingDetails);
+              await Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => RoomMeetingDetail(
+                    meetingId: widget.meetingId,
+                  ),
+                ),
+              );
+              BlocProvider.of<MyMeetingBloc>(context)
+                  .add(MyMeetingFetchEvent());
             },
             child: Container(
               child: Padding(

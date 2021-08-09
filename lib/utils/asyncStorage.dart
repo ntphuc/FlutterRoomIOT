@@ -10,4 +10,9 @@ class AsyncStorage {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     return prefs.getString(key);
   }
+
+  static Future<bool> remove(String key) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    return prefs.remove(key);
+  }
 }

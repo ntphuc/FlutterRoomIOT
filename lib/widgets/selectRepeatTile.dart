@@ -6,8 +6,13 @@ import 'package:flutter/material.dart';
 class SelectRepeatItem {
   String title;
   bool selected;
+  int value;
 
-  SelectRepeatItem({@required this.title, this.selected = false});
+  SelectRepeatItem({
+    @required this.title,
+    @required this.value,
+    this.selected = false,
+  });
 }
 
 class SelectRepeatTile extends StatefulWidget {

@@ -1,9 +1,12 @@
 import 'package:demo_b/core/routes/dialogPageRoute.dart';
 import 'package:demo_b/core/routes/routeName.dart';
+import 'package:demo_b/models/control/room.dart';
 import 'package:demo_b/modules/addMeeting/addMeetingView.dart';
 import 'package:demo_b/modules/addMeeting/selectParticipant/selectParticipantView.dart';
 import 'package:demo_b/modules/addMeeting/selectRepeat/selectRepeatView.dart';
 import 'package:demo_b/modules/addMeeting/selectRoom/selectRoomView.dart';
+import 'package:demo_b/modules/adminControl/deviceListControl/deviceListControlView.dart';
+import 'package:demo_b/modules/adminControl/roomListControl/roomListControlView.dart';
 import 'package:demo_b/modules/forgotPassword/forgotPasswordView.dart';
 import 'package:demo_b/modules/home/homeView.dart';
 import 'package:demo_b/modules/meetingCalendar/meetingCalendarView.dart';
@@ -37,6 +40,12 @@ class MainRouter {
       case RouteName.meetingCalendar:
         return MaterialPageRoute<dynamic>(
             builder: (_) => MeetingCalendarView());
+      case RouteName.roomListControl:
+        return MaterialPageRoute<dynamic>(
+            builder: (_) => RoomListControlView());
+      case RouteName.deviceListControl:
+        return MaterialPageRoute<dynamic>(
+            builder: (_) => DeviceListControlView(settings.arguments as Room));
       default:
         return MaterialPageRoute<dynamic>(builder: (_) {
           return Scaffold(

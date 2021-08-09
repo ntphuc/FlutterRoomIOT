@@ -3,11 +3,14 @@ import 'package:demo_b/models/reqres/forgotPassword.dart';
 import 'package:demo_b/modules/base/baseModel.dart';
 import 'package:demo_b/services/authService.dart';
 import 'package:demo_b/utils/toast.dart';
+import 'package:flutter/material.dart';
 
 class ForgotPasswordModel extends BaseModel {
   final AuthService _authService = AuthService.instance();
+  BuildContext context;
   String email;
-  String password;
+
+  ForgotPasswordModel(this.context);
 
   Future<void> forgotPassword() async {
     setLoading(true);
